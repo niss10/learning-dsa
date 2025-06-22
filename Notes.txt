@@ -1,0 +1,161 @@
+- Big O say how well your code solve problem. how well it performs when we scale it. 
+
+What is good code?
+	1. Readable - How well your code can be read.
+	2. Scalable - big O - How well code perform when we scale the input
+
+# Big O
+
+- Big O is measurement to see how well code performs when we increases input.
+- Big O means how much number of operation increases of function or algorithm when we increase input.
+
+## so how we represent big O in practical
+
+- it is O(n) here n represent number of input. and O(n) represent number of operation on given n.
+
+
+## What are they 
+
+O(n) -  linear time complexity. why linear? it says with n number of input it will take n number of operation.
+
+Here is one special that I love most 
+
+O(1) - Constant time complexity. why constant? it says with any number of input it will take constant operation. so number of input will not at all affect 	the number of operation 
+
+	for example
+		number of input = 1 - number of operation = 1
+		number o input = 10 - number of operation = 1
+		number o input = 10k - number of operation = 1
+
+	Most scalable algorithm. that is the goal of any algorithm development
+	
+
+
+## How we actually calculate big O
+
+- First thing we only care how algorithm behaves as input increase. For example it increase linearly, constantly etc..
+- As I have noticed there are multiple line in code and every line has it's operation. So we want to check how many number of operation that particular line needs to do on given input. 
+
+
+def printHello(input):
+	a = 10 # O(1)
+	b = 100 # O(1)
+	for i in input: # O(n)
+		print(hello) # O(n)
+	return # O(1)
+
+	
+Total time complexity is 3 + 2n = O(3 + 2n) = O(n)
+
+## Rule book
+
+Rule 1: Always worst case
+Rule 2: Remove constant
+Rule 3: Different input should have different variable O(a+b) or O(a*b)
+Rule 4: Drop non-dominant term
+
+======================================================================
+No matter how big the constant is and how slow the linear increase is, linear will at some point surpass constant.
+
+If your algorithm is in the form "do this, then, when you're all done, do that" then you add the runtimes. 
+If your algorithm is in the form "do this for each time you do that" then you multiply the runtimes. 
+
+
+## Amortized time
+	Amortized time is the average time an operation takes, considering that some rare, slow operations are spread out over many fast ones. means we ignore rare slow operation.
+
+### Log N
+
+	Every step you cut down input size by half, binery search
+
+	16 = 2^4
+	log 16 = 4
+
+
+	Log N means what power of 2 makes N. 
+
+
+
+Data structure +  Algorithm = Program
+
+good + good =  good
+
+for that we have to pick right data structure and right algorithm and to right program. the only matters is how scalable solution is how it performs when we scale.
+
+
+Most expensive time complexity is n!, never every your code should have this time complexity
+
+
+O(N!) = Factorial - I am adding a loop for every element in input.
+
+
+
+
+What is best code?
+
+Three pillars of good code. Good engineer is very careful of below 3 pillars. they define engineer.
+
+1. readable - It should be readable
+2. speed - It should be faster
+3. Space - It should not consume lot of memory
+
+
+What causes space complexity
+
+1. Variables
+2. function calls
+3. allocation
+4. Data structure
+
+
+
+When we talk about space complexity we talk about additioanal space not initial space taken by input.
+
+
+
+Data Structures
+==================================================================================================================================
+There some operation I can perform on data structure
+
+- insertion
+- Deletion
+- Traversal
+- searching
+- sorting
+- Access
+
+-- Each data structure has different pros and cons for this operation. Some data structure has good at certain operation some at bad. we are doing different tradeoff between this data structure
+
+Let's start our journey to data structure
+
+1. Array
+=================================================
+Array is most basic data structure and most used
+
+Access, add, and pop operation are most efficient with O(1) - constant
+
+while insert, delete and traversing operation are O(n) - linear
+
+There are two types of array static Array and Dynamic Array. 
+
+In static Array we are assigning fixed size of memory block which we initially created and we not grow from that
+
+In dynamic Array we usually assign double of memory of initial array size. and If we reach end of memory higher level language usually again create doubled memory of size array and relocate array. 
+
+
+So, sometime append operation take O(n) time due to this and we usually don't consider this because rule of amortize where we ignore some case that happen once a while.
+
+
+-- Always consider String as Array. and solve problem. So, First convert String to Array solve it and make string.
+
+-- Python and JavaScript string can be access as Array
+
+-- Always deliver most sophisticated modern way solution to a problem and talk through it.
+
+-- Always explain pros and cons of solution, that's sign of great engineer.
+
+
+
+
+
+

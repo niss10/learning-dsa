@@ -1,0 +1,2 @@
+Linked List python implementation 
+    https://www.freecodecamp.org/news/introduction-to-linked-lists-in-python/
