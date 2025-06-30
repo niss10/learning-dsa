@@ -1,0 +1,8 @@
+How to solve problems:
+    1. First Understant problem.
+    2. Determine what needs to be solved.
+    3. How it can be solved logically.
+    4. Then how it can be solved Mathematically.
+    5. Now convert it to sudo code.
+        a. For that first Determine what tools are most efficient to solve this problem, here tools are DS and Alogorithms
+        b. Now compare characteristics for all tools that possibly can be used ans select best one based on their characteristics.

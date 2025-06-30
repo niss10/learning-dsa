@@ -1,3 +1,5 @@
+Art of Problem-Solving is first need to understand problem which means understanding what we want to solve what we want to achive what we have(input and output). Then thinking about how I can go from input to output logically naturally and if possible need to make it mathematical problem and then coding and then optimizing problem in such way that time taken from input to output is minimal
+
 - Big O say how well your code solve problem. how well it performs when we scale it. 
 
 What is good code?
@@ -153,8 +155,9 @@ So, sometime append operation take O(n) time due to this and we usually don't co
 -- Always deliver most sophisticated modern way solution to a problem and talk through it.
 
 -- Always explain pros and cons of solution, that's sign of great engineer.
-
-
+=============================================================================================================================================================
+New Notes:
+=============================================================================================================================================================
 
 
 
