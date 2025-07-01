@@ -1,2 +1,3 @@
-1. Implement area of polygon
-2. Impolement point from line segment
+1. Implement area of polygon.
+2. Impolement point from line segment.
+3. Learn more about Basic Mathes requires for programmers.
