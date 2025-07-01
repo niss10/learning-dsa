@@ -1,4 +1,4 @@
-/* sort is slow sorting algorithm it takes O(n^2) time complexity.
+/* Bubble sort is slow sorting algorithm it takes O(n^2) time complexity. but may be better then selection sort as it perform better in best case where all element are already sorted.
 - At each iteration we compare to adjusant element and swap them in sorted order at on full cycle of inner for loop the largest element will be bubble up.
 - Here we scan list of elements till all are sorted and each scan largest wil be bubbled up to last, so every time n to n-i element will be sorted.
 - For beat case if we use flag time complexity will be O(n);
