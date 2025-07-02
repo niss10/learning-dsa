@@ -1,5 +1,6 @@
 Art of Problem-Solving is first need to understand problem which means understanding what we want to solve what we want to achive what we have(input and output). Then thinking about how I can go from input to output logically naturally and if possible need to make it mathematical problem and then coding and then optimizing problem in such way that time taken from input to output is minimal
 
+- If you want to execute loop only based on condition rather then iteration consider using while loop.
 - Big O say how well your code solve problem. how well it performs when we scale it. 
 
 What is good code?
@@ -155,10 +156,99 @@ So, sometime append operation take O(n) time due to this and we usually don't co
 -- Always deliver most sophisticated modern way solution to a problem and talk through it.
 
 -- Always explain pros and cons of solution, that's sign of great engineer.
+
 =============================================================================================================================================================
-New Notes:
+Sorting Alogorithms
 =============================================================================================================================================================
+How we classify algorithm:
+	1. Time complexity
+	2. Space complexity
+		- In-place or constant Time
+		- Space grows with input size
+	3. Stability
+		- If there are two elements with same value if algorithm preserve original size we can say it is stable algorithm
+	4. Internal vs Extranl 
+		- Internal: Use is RAM only or Records are on RAM
+		- External: Use Disk or Records are on disk
+	5. Recursive or Non-Recusrsive
+--------------------------------------------------------------------------------------------------------------------------
+Selection Sorting - O(n^2) time complexity; O(1) space complexity
+--------------------------------------------------------------------------------------------------------------------------
+Selection is sort is slow sorting algorithm it takes O(n^2) time complexity
 
+How Selection sort works:
+	- In Selection sort at each iteration we select element and comapare with other elements in list and put the minimal element in ascdeing order for descnding we will do reverse.  
+	- The other version of selection sort where we keep other array for sorted elements Space complexity will be O(n) with same O(n^2) time complexity
 
+1. Time complexity - Worst Case: O(n^2); Avg Case: O(n^2); Best Case: O(n^2)
+2. Space complexity - O(1) In-place
+3. Stability - Yes
+4. Internal - Yes
+5. Non-Recusrsive
+--------------------------------------------------------------------------------------------------------------------------
+Bubble Sorting - O(n^2) time complexity; O(1) space complexity
+--------------------------------------------------------------------------------------------------------------------------
+sort is slow sorting algorithm it takes O(n^2) time complexity.
 
+How Bubble sort works:
+	- At each iteration we compare adjusant elements and swap them in sorted order at on full cycle of inner for loop the largest element will be bubble up.
+	- Here we scan list of elements till all are sorted and each scan largest wil be bubbled up to last, so every time n to n-i element will be sorted.
+	- For beat case if we use flag time complexity will be O(n);
 
+1. Time complexity - Worst Case: O(n^2); Avg Case: O(n^2); Best Case: O(n)
+2. Space complexity - O(1) In-place
+3. Stability - Yes
+4. Internal - Yes
+5. Non-Recusrsive
+--------------------------------------------------------------------------------------------------------------------------
+Insertion Sorting - O(n^2) time complexity; O(1) space complexity
+--------------------------------------------------------------------------------------------------------------------------
+Insertion sort is slow sorting algorithm it takes O(n^2) time complexity. But for best case Time Complexity: O(n); and also if we see practically logic of insertion sort it has less comprasaion and loop so it is quite better then selection and bubble sort.
+
+How Insertion sort works:
+    - First we take list of array and we assume left side is sorted,
+    - We take each element from begining and make hole at the index of element.
+	- we compare with previous (left side sorted array) then we shift larger element in hole and make hole and repeat till we find appropiat hole for our current or targeted element. and insert.
+
+1. Time complexity - Worst Case: O(n^2); Avg Case: O(n^2); Best Case: O(n)
+2. Space complexity - O(1) In-place
+3. Stability - Yes
+4. Internal - Yes
+5. Non-Recusrsive
+
+--------------------------------------------------------------------------------------------------------------------------
+Merge Sorting - O(nlog(n)) time complexity; O(n) space complexity
+--------------------------------------------------------------------------------------------------------------------------
+Merge sort is good algorithmn as time complexity is O(nlog(n)) but space complexity is O(n).
+- Merge sort is recursive algorithm as it solve problem is self similar manner. and it follows divide and conqur principle to solve problem.
+
+How it works:
+    - First we take input as array and we divide it in left and right part with middle index and we divide till we get to the single element and single element is always sorted. now we start merging element for that we take those left and right element which are already sorted and we merge them in sorting order.
+
+1. Time complexity - Worst Case: O(nlog(n));
+2. Space complexity - O(n)(Recusrsion Call + Additional Array Space).
+3. Stability - Yes
+4. Internal - Yes
+5. Recusrsive
+6. Divide and Conqur principle
+7. In-Place - No
+
+--------------------------------------------------------------------------------------------------------------------------
+Quick Sorting - O(nlog(n)) time complexity; O(log(n)) space complexity
+--------------------------------------------------------------------------------------------------------------------------
+Quick sort is most efficiant algorithm as it take O(nlog(n)) time and O(log(n)) space complexity 
+- We can avoid worst case by selecting pivot element as random element and then set it last element.
+- Quick Sort is In-Place sorting algorithm we don't take extra memory to store array value but recursion take log(n) space in stack memory.
+
+How quick Sort work:
+    - First quick sort take array as input and start and end index then first it find partition so we divide array with left side values are always less then pivot element(Last element(we randomly select from array and swap with last element)). And right side always greater then pivot.
+    - We repeat this pprocess self similar manner means recursivly calling quick sort again with left side and right side of Pivot element.
+    - So it takes n times for partion and log(n) time for calling quick sort again with half element.
+
+1. Time complexity - Best and Avg Case: O(nlog(n)); Worst Case: O(n^2);
+2. Space complexity - Best and Avg Case: O(log(n))(Recursive call Stack Space); Worst Case: O(n);
+3. Stability - Yes
+4. Internal - Yes
+5. Recusrsive
+6. Divide and Conqur principle
+7. In-Place - Yes
