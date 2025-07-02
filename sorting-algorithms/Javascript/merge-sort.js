@@ -5,8 +5,7 @@ How it works:
     - First we take input as array and we divide it in left and right part with middle index and we divide till we get to the single element and single element is always sorted. now we start merging element for that we take those left and right element which are already sorted and we merge them in sorting order.
 */
 
-// Time Complexity: O(nlog(n)); Space Complexity = O(nlog) or O(n)
-
+// Time Complexity: O(nlog(n)); Space Complexity = O(nlog(n)) or O(n)
 const merge = (left, right, arr) =>{
     console.log('Merge called with....');
     
