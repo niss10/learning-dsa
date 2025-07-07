@@ -1,4 +1,8 @@
-// Time Complexity = O(log(n)); Space Complexity = O(log(n));
+/*
+- To find total occurrence we need to first calculate first occurance of element and last occurrence then  we can get length of by subtracting last occurrence - first occurrence as all occurance is between first occurrence and last occurrence.
+*/
+
+// Time Complexity = O(log(n)); Space Complexity = O(1);
 function binarySearchHelper(arr, target, firstOccurrence){
     let result = -1;
     let start = 0;
