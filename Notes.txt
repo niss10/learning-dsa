@@ -252,3 +252,87 @@ How quick Sort work:
 5. Recusrsive
 6. Divide and Conqur principle
 7. In-Place - Yes
+
+=============================================================================================================================================================
+Searching Alogorithms
+=============================================================================================================================================================
+In this below notes we will discuss various type of Searching Algorithm.
+--------------------------------------------------------------------------------------------------------------------------
+Linear Search - O(n^2) time complexity; O(1) space complexity
+--------------------------------------------------------------------------------------------------------------------------
+Time Complexity = O(n); Space Complexity = O(1);
+
+Self explanatatoy we do linearly check one by one elment and match with given value if find we will return index;
+
+--------------------------------------------------------------------------------------------------------------------------
+Binary Search - O(log(n)) time complexity; O(1) space complexity(Iterative Implementation) O(log(n))(Recusrsive Implementation)
+--------------------------------------------------------------------------------------------------------------------------
+When ever you are given with sorted array and you need to solve problem by searching somthing think of Binary Search.
+// Time Complexity = O(nlog(n)); Space Complexity = O(log(n));
+Note: Binary search itself take log(n) time complexity. But there is added time for Sorting Input.
+It must have sorted input to work upon;
+Binary Search work upon three case.
+Case - 1: Every time we check middle element and if target value match middle element we return found and index.
+Case - 2: If target is less then middle element in next iterative or recursive call we will check array elements from start till middle.
+Case - 3: If target is greater then middle element in next iterative or recursive call we will check array elements from middle to end.
+
+We will repeat this process till found element or start index becomes greater then end.
+So there will be two exit condition 1. If we found 2. IF we check all element and not found this case start > end;
+
+--------------------------------------------------------------------------------------------------------------------------
+Binary Search First Occurance of Element - O(log(n)) time complexity; O(1) space complexity(Iterative Implementation)
+--------------------------------------------------------------------------------------------------------------------------
+- Binary search have many variation and can be applied in many problem and one problem is when we want to find first occurance of element in sorted array.
+
+- to solve this problem we will not stop searching element when we find first time element instead if we will search again on left side and update our result inde every time we find lets see code everything will be clear seeing code.
+
+--------------------------------------------------------------------------------------------------------------------------
+Binary Search Last Occurance of Element - O(log(n)) time complexity; O(1) space complexity(Iterative Implementation)
+--------------------------------------------------------------------------------------------------------------------------
+- Binary search have many variation and can be applied in many problem and one problem is when we want to find last occurance of element in sorted array.
+
+- to solve this problem we will not stop searching element when we find first time element instead if we will search again on this time right side and update our result inde every time we find lets see code everything will be clear seeing code.
+
+--------------------------------------------------------------------------------------------------------------------------
+Binary Search find total occurrence of Element - O(log(n)) time complexity; O(1) space complexity(Iterative Implementation)
+--------------------------------------------------------------------------------------------------------------------------
+- To find total occurrence we need to first calculate first occurance of element and last occurrence then  we can get length of by subtracting last occurrence - first occurrence as all occurance is between first occurrence and last occurrence.
+
+--------------------------------------------------------------------------------------------------------------------------
+Binary Search find total rotation of sorted array  - O(log(n)) time complexity; O(1) space complexity(Iterative Implementation)
+--------------------------------------------------------------------------------------------------------------------------
+- To find total occurrence we need to first calculate first occurance of element and last occurrence then  we can get length of by subtracting last occurrence - first occurrence as all occurance is between first occurrence and last occurrence.
+
+ - This works on circularly sorted array and there must be no duplicate in array.
+ - To solve this problem we can use binear search variation here.
+ First we check if start element and last element if start element is smaller then last element we can say array is already sorted on it is not rotated.
+ - Okay so now if let's assume array is rotated one or more then one times. 
+ Then we need to find smallest element in array if previous element and next element is greater then current element we can say it is smallest element and all elements before are circularly shifted so index of that element is count of rotation.
+ - Now to loop an find this condition we check start elment and mid element if start is less then mid element we can sure that all element before that mid element are sorted then we need to loop through right side of element. 
+ - Else is start elment is greater then mid element we can say that our target element is in that portion start to mid.
+ - So here every time we are dividing array in two parts. We never check sorted part. See the code you will get idea.
+
+--------------------------------------------------------------------------------------------------------------------------
+Find element in circularly sorted array  - O(log(n)) time complexity; O(1) space complexity(Iterative Implementation)
+--------------------------------------------------------------------------------------------------------------------------
+ - Here we are finding element in circularly rotated Array. To do this operation list must not have any duplicate element.
+- Okay, now we do same as binary search there will be three case.
+
+Case 1: we find mid index and compare element with target. if match we return index;
+Case 2: Target Greater then mid element;
+    - now element can be either left side or right side. And we are sure that one of the side will always be sorted(this is the key to find where we can go)
+    Case 2A: if(mid element is less then end element this side is sorted)
+        - now if target element is greater then mid element and less then end element now we can search in this segment
+        - Else element is on left side.
+    Case 2B: if we reach here means right side of mid element is not sorted so we check here
+        - if element is in left side(sorted). if target is greater then start element and less then mid element
+        - Else element is on right side.   
+Case 3: Target is less then mid element;
+    Case 3A: if(start element is less then mid element and target is also with in them)
+        - We check if tartget is in left sorted part
+        - Else it is on right side
+    Case 3B: else target is right side but right side is sorted
+        - we check if it in right side 
+        - else it is on left side
+
+See the code closely you will get idea it is complex yet very simple.

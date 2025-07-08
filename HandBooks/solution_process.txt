@@ -6,3 +6,7 @@ How to solve problems:
     5. Now convert it to sudo code.
         a. For that first Determine what tools are most efficient to solve this problem, here tools are DS and Alogorithms
         b. Now compare characteristics for all tools that possibly can be used ans select best one based on their characteristics.
+
+Notes to that can help for problem:
+- When ever you are given with sorted array and you need to solve problem by searching somthing think of Binary Search.
+- Every time you hear "loop", "repeat", "cycle", or "fit into fixed slots", think: modulo.
