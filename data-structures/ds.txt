@@ -1,0 +1,63 @@
+==================================================================================================
+List - Abstract Data Types 
+==================================================================================================
+List can be implemented with Array and Linked List
+
+What is List?
+    - Stores a given number of elements of a given data Types.
+    - write/modify element at particular position.
+    - Read element at a position.
+    - Dynamic list can grow as per need.
+    - Can give total number of elements.
+
+List Operations:
+    - is list empty?(size 0)
+    - insert element
+    - remove element
+    - count elements
+    - read element 
+    - modify element
+    - specify data Types
+---------------------------------------------------------------------------------------------------
+Array
+---------------------------------------------------------------------------------------------------
+- It has fixed size it can be dynamic also.
+- It stores values in contineous memory block
+- So Access time is always O(1);
+- Space is issue with Array. Because it by default reserve space in conineous memory block. So unused memory is always wasted.
+ Example : int arr[10] will reserve 10 memory block wheather they will be used or not used.
+
+In Array only add element at last and access element at index and pop operation are constant(1) time all other time are O(n). Also adding element at last is O(n) in worst case if object is full as we need to create new array with double size.
+
+Operation - Time Complexity - Space Complexity 
+Access - O(1) - O(1)
+Insert - O(n) - O(1)
+Remove - O(n) - O(1)
+Add - O(1)-best case O(n)-worst case - O(n)
+
+---------------------------------------------------------------------------------------------------
+Linked List
+---------------------------------------------------------------------------------------------------
+- It has dynamic size. It has never have extra memory other then pointers.
+- Linked List does not store objecs in contineous memoery.
+- It create random object anywhere in memory and using pointers connect nodes.
+- Current object have pointers to next object.
+- One drawback of linked list is it can not have constant access time.
+- Memory efficient Data Structure.
+- Linked list is great for building other Abstract Data Structure like Stack and Queue.
+- other variation like doubly linked list or Circular Linked List enable to solve more complex problem and more Abstract Data Structure like Binary Tree, Graph etc...
+
+Operation - Time Complexity - Space Complexity 
+Access - O(n) - O(1)
+Insert - O(n) - O(1)
+Remove - O(n) - O(1)
+Add at Top - O(1) - O(1)
+Add at last - O(n) - O(1)
+
+
+How Linked List is impolemented?
+    - There is always a head pointer that point head or start of linked list
+    - Then we make chain of node(data + pointer). Current node has data and pointer to the next node.
+    - Last Node pointer has null to mark end of list.
+
+    - Node are created in heap memory and head is at STACK
