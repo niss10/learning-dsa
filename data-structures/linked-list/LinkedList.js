@@ -1,11 +1,11 @@
-class Node{
+export class Node{
     constructor(data){
         this.data = data;
         this.next = null;
     }
 }
 
-class LinkedList{
+export class LinkedList{
     constructor(...items){
         this.head = null;
         this.length = 0;
@@ -194,36 +194,36 @@ class LinkedList{
 }
 
 
-let list1 = new LinkedList(3, 4, 5);
-list1.add(6)
-console.log(list1.print());
-console.log(list1.len());
-list1.insertAt(7, 2);
-console.log(list1.print());
-list1.insertAt(9, 0);
-console.log(list1.print());
-list1.insertAt(10, 6);
-console.log(list1.print());
-list1.insertAt(11, 1);
-list1.insertAt(12, 7);
-console.log(list1.print());
-console.log(list1.len());
-// console.log(list1.get(9));
-console.log(list1.pop());
-console.log(list1.print());
-console.log(list1.len());
-console.log(list1.pop());
-console.log(list1.print());
-console.log(list1.len());
-console.log(list1.remove(9));
-console.log(list1.print());
-console.log(list1.len());
-console.log(list1.removeAt(0));
-console.log(list1.removeAt(4));
-console.log(list1.removeAt(2));
-console.log(list1.removeAt(9));
-console.log(list1.print());
-console.log(list1.len());
+// let list1 = new LinkedList(3, 4, 5);
+// list1.add(6)
+// console.log(list1.print());
+// console.log(list1.len());
+// list1.insertAt(7, 2);
+// console.log(list1.print());
+// list1.insertAt(9, 0);
+// console.log(list1.print());
+// list1.insertAt(10, 6);
+// console.log(list1.print());
+// list1.insertAt(11, 1);
+// list1.insertAt(12, 7);
+// console.log(list1.print());
+// console.log(list1.len());
+// // console.log(list1.get(9));
+// console.log(list1.pop());
+// console.log(list1.print());
+// console.log(list1.len());
+// console.log(list1.pop());
+// console.log(list1.print());
+// console.log(list1.len());
+// console.log(list1.remove(9));
+// console.log(list1.print());
+// console.log(list1.len());
+// console.log(list1.removeAt(0));
+// console.log(list1.removeAt(4));
+// console.log(list1.removeAt(2));
+// console.log(list1.removeAt(9));
+// console.log(list1.print());
+// console.log(list1.len());
 
 
 
