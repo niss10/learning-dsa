@@ -1,5 +1,7 @@
 import { LinkedList, Node } from './LinkedList.js';
-function reverseLinkedList(LinkedListObject){
+
+// O(n) Time Complexity; O(1) Space Complexity;
+function reverse(LinkedListObject){
     if (LinkedListObject.head != null) {
         let currentNode = LinkedListObject.head;
         if (currentNode.next == null){
@@ -28,7 +30,7 @@ function reverseLinkedList(LinkedListObject){
 let list1 = new LinkedList(12,14,16,18,19);
 console.log(list1.print());
 
-let reversedList1 = reverseLinkedList(list1);
+let reversedList1 = reverse(list1);
 console.log(reversedList1.print());
 
 

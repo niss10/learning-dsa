@@ -71,7 +71,50 @@ export class LinkedList{
     len(){
         return this.length;
     }
- 
+/* Iterative Implementation of reverse Linked List
+    reverse(){
+        if (this.head != null) {
+            let currentNode = this.head;
+            if (currentNode.next == null){
+                return;
+            }
+            else{
+                let nextNode = currentNode.next;
+                let prevNode = currentNode;
+                while(nextNode.next != null){
+                    currentNode = nextNode;
+                    nextNode = currentNode.next;
+                    currentNode.next = prevNode;
+                    prevNode = currentNode;
+                }
+                // Adjusting linkes for the last node
+                currentNode = nextNode;
+                currentNode.next = prevNode;
+                this.head.next = null; // Making first element pointing to null
+                this.head = currentNode; // Now reversing head
+                return;
+            }
+        }
+        return;
+    }
+*/
+
+    reverseHelper(currentNode){
+        if (currentNode.next == null){
+        this.head = currentNode;
+        return currentNode;
+    }
+
+    this.reverseHelper(currentNode.next);
+    let nextNode = currentNode.next;
+    nextNode.next = currentNode;
+    currentNode.next = null;
+    }
+
+    reverse(){
+        return this.reverseHelper(this.head);
+    }
+
     insertAt(item, index){
         if((typeof index === "number") && (index <= (this.length)) && (index >= 0)){
             // O(1) Time Complexity;
@@ -161,13 +204,10 @@ export class LinkedList{
                 }
                 return "Not found";
             }
-            
-            
         }
         else{
             return "List is Empty";
         }
-
     }
 
     // O(n)
